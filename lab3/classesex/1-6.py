@@ -8,16 +8,17 @@ q.getString()
 q.printString()
 
 
+
 class Square:
-    def __init__(self, len):
-        self.len = len 
+    def __init__(self, length):
+        self.length = length 
     
     def area(self):
-        print(pow(self.len, 2))
+        print(pow(self.length, 2))
 
 class Shape(Square):
-    def __init__(self, len = 0):
-        Square.len = len 
+    def __init__(self, length = 0):
+        super ().__init__(length)
 
 p1 = Shape(5)
 p1.area()
@@ -27,24 +28,23 @@ p1.area()
 
 class Rectangle:
     def __init__(self, a, b):
-        self.S = self.a * self.b
+       self.S=self.a*self.b
     
     def area(self):
-        print(self.a * self.b)
+        print( self.a * self.b)
 
 class Shape(Rectangle):
     def __init__(self, a = 0, b = 0):
-        Rectangle.a = a 
-        Rectangle.b = b
-
+      Rectangle.a = a 
+    Rectangle.b = b
 
 p1 = Shape(5, 6)
 
-p1.area()
+print(p1.area())
 
 
 
-class Point:
+class Point: 
     def __init__(self, x_coord = 0, y_coord = 0):
         self.x = x_coord
         self.y = y_coord
@@ -70,7 +70,7 @@ class Point:
 
 
 
-class Account:
+class Account:    
     def __init__(p1, Name: str, Surname: str, Balance: int):
         p1.name_surname = Name + "_" +Surname
         p1.balance = Balance
@@ -84,7 +84,7 @@ class Account:
         else:
             self.balance -= How_much
 
-user1 = Account("Aru", "Sat", 5000)
+user1 = Account("Nur", "Sat", 5000)
 user1.deposit(10000)
 user1.balance_check()
 user1.withdraw(2000)
