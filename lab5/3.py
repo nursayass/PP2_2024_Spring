@@ -1,6 +1,13 @@
-def div(n):
-    for i in range(n):
-        if i % 3 == 0 and i % 4 == 0:
-            yield i
-for num in div(50):
-    print(num)
+
+
+
+import re
+# Write a Python program to find sequences of lowercase letters joined with a underscore.
+str = "hk_jnnh"
+pattern3 = r"^[a-z]+_[a-z]+$"
+x = re.findall(pattern3, str)
+if x: 
+    print(x)
+    print("A match is found!")
+else:
+    print("Not matched!")

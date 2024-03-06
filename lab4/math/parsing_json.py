@@ -1,7 +1,8 @@
 import json
 
-with open('sample-data.json') as file:
-    json_data = json.load(file)
+
+f=open('sample-data-json.json')
+json_data = json.load(f)
 
 a=''' 
 Interface Status

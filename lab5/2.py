@@ -1,7 +1,11 @@
-def even_num(n):
-    for i in range(0, n+1, 2):
-        yield i
 
-n = int(input("Enter a number: "))
 
-print(*even_num(n), sep=', ')
+import re
+# Write a Python program that matches a string that has an 'a' followed by two to three 'b'.
+str = "abbb"
+pattern2 = r"ab{2,3}"
+x = re.search(pattern2, str)
+if x: 
+    print("A match is found!")
+else:
+    print("Not matched!")
