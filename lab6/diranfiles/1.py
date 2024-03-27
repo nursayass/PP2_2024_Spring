@@ -1,6 +1,6 @@
 import os
 
-path = r'C:\Users\ARU\Desktop'
+path = r'C:\Users\ZZZ\Desktop'
 
 for i in os.listdir(path):
     if os.path.isdir(os.path.join(path,i)):
