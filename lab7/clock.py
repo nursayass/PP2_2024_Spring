@@ -18,12 +18,12 @@ def main():
 
 
     # loading the images 
-    clock_image = pygame.transform.scale(pygame.image.load('./images/mickeyclock.jpeg'), (800, 600))
-    sechand_image = pygame.image.load('./images/sechand.png')
+    clock_image = pygame.transform.scale(pygame.image.load('lab7/images/mickeyclock.jpeg'), (800, 600))
+    sechand_image = pygame.image.load('lab7/images/sechand.png')
     sechand_image = pygame.transform.scale(sechand_image, (250, 75))
     sechand_rect = sechand_image.get_rect()
     sechand_rect.center = (400, 300)
-    minhand_image = pygame.image.load('./images/minhand.png')
+    minhand_image = pygame.image.load('lab7/images/minhand.png')
     minhand_image = pygame.transform.scale(minhand_image, (200, 50))
     minhand_rect = minhand_image.get_rect()
     minhand_rect.center = (400, 300)

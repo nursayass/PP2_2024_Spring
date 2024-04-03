@@ -6,7 +6,7 @@ pg.init()
 class SOUND:
     def __init__(self, path_to_sound, path_to_photo):
         self.sound = pg.mixer.Sound('music\\' + path_to_sound)
-        self.photo = pg.image.load('assets\\sound_images\\' + path_to_photo)
+        self.photo = pg.image.load('assets\sound_images' + path_to_photo)
         self.is_playing = True
     
     def placePhoto(self,screen):
