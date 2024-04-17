@@ -16,19 +16,25 @@ PURPLE = (153, 0, 153)
 
 
 def draw_line(screen, start, end, width, color):
+    # Определяем координаты начала и конца линии
     x1 = start[0]
     y1 = start[1]
     x2 = end[0]
     y2 = end[1]
-
+  
+    
+  # Вычисляем изменение по координатам x и y
     dx = abs(x1 - x2)
     dy = abs(y1 - y2)
-
+    
+    
+    # Вычисляем параметры линии (A, B, C) в уравнении прямой Ax + By = C
     A = y2 - y1
     B = x1 - x2
     C = x2 * y1 - x1 * y2
 
-    
+       # Рисуем линию
+       
     if dx > dy:
         if x1 > x2:
             x1, x2 = x2, x1

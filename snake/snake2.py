@@ -1,16 +1,15 @@
 import pygame
 import random
 
-def game():
+def main():
     
     pygame.init()
     
     #Монитор
     monitor = pygame.display.set_mode((400,500))
-    pygame.display.set_caption("Snake")
-    pygame.display.set_icon(pygame.image.load("lab9/assets/snake.png"))
+    pygame.display.set_caption("My Snake 2")
 
-    #color 
+    #color
     black = (0,0,0)
     red = (255,0,0)
     white = (255,255,255)
@@ -42,8 +41,8 @@ def game():
     direction = 'left'
 
     #start
-    player = [220, 200] 
-    snake = [[220, 200], [230, 200], [240, 200]]
+    player = [220, 200]
+    snake = [[220, 200], [200, 200], [220, 200]]
 
     #FPS
     clock = pygame.time.Clock()
@@ -98,8 +97,7 @@ def game():
         
         #Apple spawn (random) if apple generated in otherside, so this apple delete
         while apple_spawn:
-            apple = (random.randint(1, int(monitor.get_width() / 10 - 1)) * 10, random.randint(10, int(monitor.get_height() / 10 - 1)) * 10)
-
+            apple = (random.randint(1,monitor.get_width() / 10 - 1) * 10, random.randint(10, monitor.get_height() / 10 - 1) * 10)
             if apple not in snake:
                 apple_spawn = False
 
@@ -179,7 +177,7 @@ def game():
                 check = False
             if action.type == pygame.KEYDOWN:
                 if action.key == pygame.K_r:
-                    game()
+                    main()
                 if action.key == pygame.K_q:
                     check = False
         monitor.fill(white)
@@ -187,8 +185,5 @@ def game():
         monitor.blit(score_font.render('Press R for restart or Q for quit' , True, black), (35,200))
 
         pygame.display.update()
-game()
+main()
 pygame.quit()
-            
-    
-    
