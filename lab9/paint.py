@@ -50,7 +50,7 @@ pygame.init()
 
 screen = pygame.display.set_mode((800,600))
 pygame.display.set_caption("Paint")
-pygame.display.set_icon(pygame.image.load('lab9/assets/icon.png'))
+pygame.display.set_icon(pygame.image.load('lab9\\assets\\icon.png\\'))
 
 
 #Colors
