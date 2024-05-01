@@ -140,7 +140,7 @@ def main():
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                return
+                return 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_F4 and alt_held:
                     return

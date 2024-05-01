@@ -67,7 +67,13 @@ def draw2(x1,y1,x2,y2):
 
 def draw3(x1,y1,x2):
 
-        side_len = x2-x1                      # calculating length of side
+        side_len = x2-x1  
+                                             
+                                             
+                                            
+                                            
+                                
+                     # calculating length of side
         h = math.pow(side_len**2 * 0.75, 0.5) # calculating height
 
         if side_len < 0: h *= -1              # to draw inverted triangle
